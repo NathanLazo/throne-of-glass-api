@@ -24,32 +24,38 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/api/characters" className={styles.card}>
-            <>
+          <Link href="/api/characters" passHref>
+            <a className={styles.card}>
               <h2>All characters</h2>
               <p>GET - All characters</p>
-            </>
+            </a>
           </Link>
 
-          <Link href="/api/characters?limit=10" className={styles.card}>
-            <>
-              <h2>10 characters</h2>
-              <p>GET - limit 10</p>
-            </>
+          <Link href="/api/characters?limit=10" passHref>
+            <a className={styles.card}>
+              <>
+                <h2>10 characters</h2>
+                <p>GET - limit 10</p>
+              </>
+            </a>
           </Link>
 
-          <Link href="/api/characters?limit=10&skip=10" className={styles.card}>
-            <>
-              <h2>Characters from 10 to 20</h2>
-              <p>GET - limit 10 - skip 10</p>
-            </>
+          <Link href="/api/characters?limit=10&skip=10" passHref>
+            <a className={styles.card}>
+              <>
+                <h2>Characters 10 to 20</h2>
+                <p>GET - limit 10 - skip 10</p>
+              </>
+            </a>
           </Link>
 
-          <Link href="/api/characters/5" className={styles.card}>
-            <>
-              <h2>One character</h2>
-              <p>GET - id = 5</p>
-            </>
+          <Link href="/api/characters/5" passHref>
+            <a className={styles.card}>
+              <>
+                <h2>One character</h2>
+                <p>GET - id = 5</p>
+              </>
+            </a>
           </Link>
         </div>
       </main>
